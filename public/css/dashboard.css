@@ -1,0 +1,31 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Caja de bienvenida */
+h1 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+/* Enlace para cerrar sesión */
+a {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a:hover {
+    background-color: #c82333;
+}
