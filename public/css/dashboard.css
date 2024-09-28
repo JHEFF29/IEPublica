@@ -1,31 +1,96 @@
-/* Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* Reseteo de márgenes y padding */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo del body */
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: white;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Caja de bienvenida */
-h1 {
-    color: #343a40;
-    margin-bottom: 20px;
+/* Logo centrado */
+.logo {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Enlace para cerrar sesión */
-a {
-    padding: 10px 20px;
-    background-color: #dc3545;
+.logo img {
+    max-width: 120px;
+    border-radius: 50%;
+}
+
+/* Menú lateral */
+.menu {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+}
+
+.menu li {
+    width: 100%;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 1px solid #474f57;
+    transition: background-color 0.3s;
 }
 
-a:hover {
-    background-color: #c82333;
+.menu a:hover {
+    background-color: #495057;
+}
+
+.menu a i {
+    margin-right: 10px;
+}
+
+/* Sección de Admin */
+.admin-header {
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #495057;
+    margin-top: 20px;
+}
+
+/* Contenido principal */
+.content {
+    margin-left: 250px; /* Espacio para la barra lateral */
+    padding: 20px;
+    flex: 1;
+}
+
+.content h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+.content p {
+    font-size: 18px;
+    color: #666;
 }

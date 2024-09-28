@@ -36,7 +36,46 @@ app.get('/dashboard', authMiddleware, (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'dashboard.html'));
 });
 
+// Ruta para estudiantes
+app.get('/dashboard/estudiantes', authMiddleware, (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'estudiantes.html'));
+});
 
+// Ruta para apoderados
+app.get('/dashboard/apoderados', authMiddleware, (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'apoderados.html'));
+});
+
+// Ruta para matrículas
+app.get('/dashboard/matriculas', authMiddleware, (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'matriculas.html'));
+});
+
+// Ruta para bancos
+app.get('/dashboard/bancos', authMiddleware, (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'bancos.html'));
+});
+
+// Ruta para pagos
+app.get('/dashboard/pagos', authMiddleware, (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'pagos.html'));
+});
+
+// Ruta para reportes
+app.get('/dashboard/reportes', authMiddleware, (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'reportes.html'));
+});
+
+// Ruta para administrar (admin)
+app.get('/dashboard/administrar', authMiddleware, (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'administrar.html'));
+});
+
+
+
+
+
+//------------------------------------------------------------------------------
 // Registro de usuario
 app.post('/register', async (req, res) => {
     const { username, password } = req.body;
@@ -85,6 +124,7 @@ app.post('/login', async (req, res) => {
     }
 });
 
+//-----------------------------------------------------------------
 // Servidor escuchando
 app.listen(3000, () => {
     console.log('Servidor ejecutándose en el puerto 3000');
